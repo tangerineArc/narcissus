@@ -3,4 +3,10 @@
 
 @theme {
   --font-fira: "Fira Code", monospace;
+
+  --breakpoint-large: 52.5rem;
+  --breakpoint-medium: 47.5rem;
+  --breakpoint-meh: 36.25rem;
+  --breakpoint-smol: 32.5rem;
+  --breakpoint-phone: 25rem;
 }
