@@ -1,6 +1,8 @@
+import type { ReactNode } from "react";
+
 import { Link } from "react-router";
 
-import { projects } from "../data/projects-data.ts";
+import { projects } from "../data/projects-data.tsx";
 
 import PulseRing from "../ui/PulseRing.tsx";
 
@@ -11,12 +13,13 @@ export default function ProjectSection() {
         <span className="text-[#ef476f] font-medium">ϟ </span>projects
       </h2>
       <div className="grid meh:grid-cols-2 grid-cols-1 gap-4">
-        {projects.map(({ title, url, description }) => (
+        {projects.map(({ title, url, description, icon }) => (
           <ProjectCard
             key={title}
             title={title}
             url={url}
             description={description}
+            icon={icon}
           />
         ))}
       </div>
@@ -32,7 +35,7 @@ export default function ProjectSection() {
   );
 }
 
-function ProjectCard({ title, url, description }: ProjectCardProps) {
+function ProjectCard({ title, url, description, icon }: ProjectCardProps) {
   return (
     <a
       href={url}
@@ -40,8 +43,8 @@ function ProjectCard({ title, url, description }: ProjectCardProps) {
       rel="noopener noreferrer"
       className="max-w-[450px] flex gap-x-4 bg-[#22222277] p-4 rounded-md hover:bg-[#222222aa]"
     >
-      <span className="text-2xl bg-[#33333388] w-[50px] h-[50px] flex justify-center items-center shrink-0 rounded-md">
-        {title[0]}
+      <span className="text-[#ffffd1] bg-[#33333388] w-[50px] h-[50px] flex justify-center items-center shrink-0 rounded-md">
+        {icon}
       </span>
       <div className="space-y-1">
         <h3 className="text-lg">{title}</h3>
@@ -55,4 +58,5 @@ type ProjectCardProps = {
   title: string;
   url: string;
   description: string;
+  icon: ReactNode;
 };
