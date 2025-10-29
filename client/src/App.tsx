@@ -5,6 +5,7 @@ import BlogPage from "./pages/BlogPage.tsx";
 import EducationPage from "./pages/EducationPage.tsx";
 import MiscPage from "./pages/MiscPage.tsx";
 import ProjectsPage from "./pages/ProjectsPage.tsx";
+import PdfPage from "./pages/PdfPage.tsx";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/education" element={<EducationPage />} />
       <Route path="/misc" element={<MiscPage />} />
       <Route path="/blog" element={<BlogPage />} />
+      <Route path="/pdf" element={<PdfPage />} />
     </Routes>
   );
 }
