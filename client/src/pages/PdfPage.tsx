@@ -5,7 +5,7 @@ export default function PdfPage() {
   return (
     <>
       <Navbar currentTab="pdf" />
-      <a href="/nlp.pdf" download>NLP Presentation</a>
+      <a href="/ml.pdf" download>ML</a>
       <Footer />
     </>
   );
